@@ -1,0 +1,114 @@
+:root {
+    --bg-color: #a3d2ca;
+    --form-bg: #ffffff;
+    --text-color: #333333;
+    --input-border: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#description {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+#survey-form {
+    background: var(--form-bg);
+    padding: 40px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Align labels and inputs side-by-side where needed */
+@media (min-width: 576px) {
+    .form-group {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .form-group label:first-child {
+        width: 40%;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="number"],
+    .form-group select,
+    .radio-checkbox-group {
+        width: 60%;
+    }
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.radio-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.button-container {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #59b2a2;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #468f82;
+}
